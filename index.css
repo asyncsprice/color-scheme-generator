@@ -43,7 +43,7 @@ i {
     padding: .5em 1em;
 }
 
-/* returned colors and hex code formatting */
+/* returned color and hex code formatting */
 #color-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
