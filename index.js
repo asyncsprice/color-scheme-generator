@@ -8,7 +8,7 @@ const body = document.getElementById("body")
 const lightDarkBtn = document.getElementById("light-dark-btn")
 
 /* begins the fetch */
-btn.addEventListener("click", () => {
+btn.addEventListener("pointerdown", () => {
     const selectedColor = colorSeed.value
     const colorWithoutHash = selectedColor.slice(1);
     fetch(`${baseURL}/scheme?hex=${colorWithoutHash}&mode=${colorScheme.value}&count=5`)
@@ -17,7 +17,7 @@ btn.addEventListener("click", () => {
 })
 
 /* toggles light/dark mode */
-lightDarkBtn.addEventListener("click", () => {
+lightDarkBtn.addEventListener("pointerdown", () => {
     body.classList.toggle("dark-text")
     body.classList.toggle("dark-bg")
     colorScheme.classList.toggle("dark-text")
@@ -41,7 +41,7 @@ const getColors = arr => {
 }
 
 /* saves target to clipboard */
-window.addEventListener("click", (e) => {
+window.addEventListener("pointerdown", (e) => {
     if (e.target.id.includes("code")) {
         alert(`${e.target.dataset.color} has been copied to the clipboard`)
         navigator.clipboard.writeText(e.target.dataset.color)
