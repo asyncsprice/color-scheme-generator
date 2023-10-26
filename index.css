@@ -1,0 +1,177 @@
+/* General formatting */
+* {
+    box-sizing: border-box;
+}
+
+html, body, main {
+    margin: 0;
+    padding: 0;
+}
+
+/* header formatting */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 1em;
+    gap: 1em
+}
+
+#color-seed {
+    width: 4rem;
+    height: 3rem;
+    border: 1px;
+}
+
+#color-scheme {
+    flex-grow: 1;
+    border-radius: .5rem;
+    font-size: 1.15rem;
+    padding: .5rem;
+}
+
+#color-scheme, option {
+    text-transform: capitalize;
+}
+
+i {
+    font-size: 2rem;
+}
+
+#btn {
+    border-radius: .5rem;
+    padding: .5em 1em;
+}
+
+/* returned colors and hex code formatting */
+#color-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 0;
+    grid-template-areas: 
+    "color1 color2 color3 color4 color5"
+    "color1 color2 color3 color4 color5"
+    "color1 color2 color3 color4 color5"
+    "color1 color2 color3 color4 color5"
+    "color1 color2 color3 color4 color5"
+    "color1 color2 color3 color4 color5"
+    "color1 color2 color3 color4 color5"
+    "text1 text2 text3 text4 text5";
+}
+
+.returned-color {
+    min-height: 70vh;
+    width: 100%;
+    margin: 0;
+}
+
+.hex-code {
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+
+}
+
+#color-code1 {
+    grid-area: color1;
+}
+
+#color-code2 {
+    grid-area: color2;
+    background-color: aliceblue;
+}
+
+#color-code3 {
+    grid-area: color3;
+    background-color: blue;
+}
+
+#color-code4 {
+    grid-area: color4;
+    background-color: green;
+}
+
+#color-code5 {
+    grid-area: color5;
+    background-color: black;
+}
+
+#code1 {
+    grid-area: text1;
+}
+
+#code2 {
+    grid-area: text2;
+}
+
+#code3 {
+    grid-area: text3;
+}
+
+#code4 {
+    grid-area: text4;
+}
+
+#code5 {
+    grid-area: text5;
+}
+
+.dark-bg {
+    background-color: #1F2937;
+}
+
+.dark-text {
+    color: #D5D4D8;
+}
+
+.dark-btn {
+    background-color: #3D4B60;
+    color: #fff;
+    border: none;
+}
+
+
+/* media query for smaller screens */
+@media (max-width: 449px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    #color-container {
+        margin-top: 6em;
+        padding: 1em;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "text1 color1"
+        "text2 color2"
+        "text3 color3"
+        "text4 color4"
+        "text5 color5";
+    }
+
+    .returned-color {
+        min-height: 3rem;
+    }
+
+    .hex-code {
+        margin: 0;
+        padding: 1em;
+        text-align: left;
+    }
+}
+
+/* media query for larger screens */
+@media (min-width: 800px) {
+    body {
+        font-size: 1.5rem;
+    }
+
+    header {
+        justify-content: left;
+    }
+}
