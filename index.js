@@ -11,7 +11,7 @@ const lightDarkBtn = document.getElementById("light-dark-btn")
 btn.addEventListener("click", () => {
     const selectedColor = colorSeed.value
     const colorWithoutHash = selectedColor.slice(1);
-    fetch(`https://www.thecolorapi.com/scheme?hex=${colorWithoutHash}&mode=${colorScheme.value}&count=5`)
+    fetch(`${baseURL}/scheme?hex=${colorWithoutHash}&mode=${colorScheme.value}&count=5`)
     .then(res => res.json())
     .then(data => getColors(data))
 })
