@@ -41,7 +41,7 @@ const getColors = arr => {
 }
 
 /* saves target to clipboard */
-window.addEventListener("pointerdown", (e) => {
+window.addEventListener("click", (e) => {
     if (e.target.id.includes("code")) {
         alert(`${e.target.dataset.color} has been copied to the clipboard`)
         navigator.clipboard.writeText(e.target.dataset.color)
